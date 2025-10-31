@@ -32,17 +32,16 @@ header {
 
 #target-area {
     margin: 50px 0;
-    display: flex; /* Use flexbox to center the emoji */
-    justify-content: center; /* Horizontally center */
-    align-items: center; /* Vertically center */
-    flex-grow: 1; /* Allows it to take up available space, pushing footer down */
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    flex-grow: 1; 
 }
 
 #cosmo-emoji {
     font-size: 10em; /* Large emoji */
-    transition: color 0.5s ease; /* Smooth color transition */
-    /* Ensure it's not clickable */
-    pointer-events: none; 
+    transition: color 0.5s ease; 
+    pointer-events: none; /* Make sure the emoji is not clickable */
     user-select: none;
 }
 
@@ -51,15 +50,15 @@ header {
     display: flex;
     justify-content: center;
     gap: 30px;
-    flex-wrap: wrap; /* Ensure responsiveness on small screens */
+    flex-wrap: wrap; 
     margin-top: 50px;
-    margin-bottom: 50px; /* Space above footer */
+    margin-bottom: 50px; 
 }
 
 .color-button {
     width: 150px;
     height: 150px;
-    border-radius: 50%; /* Make buttons circles (like small planets/bots) */
+    border-radius: 50%; 
     border: 8px solid #333;
     font-size: 1.5em;
     font-weight: bold;
@@ -75,7 +74,6 @@ header {
     box-shadow: 0 4px 0 0 #000;
 }
 
-/* Specific button styles (optional but good for visibility) */
 .yellow { color: #333; text-shadow: none; } /* Darker text on bright yellow */
 
 footer {
