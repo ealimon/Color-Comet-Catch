@@ -17,7 +17,7 @@ const messageElement = document.getElementById('message');
 const scoreElement = document.getElementById('score');
 const choiceButtonsDiv = document.getElementById('choice-buttons'); 
 
-// --- Helper Functions ---
+// --- Helper Functions (Remaining functions are unchanged) ---
 
 /** Gets a random selection of three color names, including the target. */
 function getRandomChoices(correctColor) {
@@ -92,4 +92,13 @@ function newRound() {
     targetColorName = COLOR_NAMES[Math.floor(Math.random() * COLOR_NAMES.length)];
     
     // CHANGE IS HERE: Now coloring the background of the colorSpot DIV
-    colorSpot.style.backgroundColor = COLORS[targetColorName];
+    colorSpot.style.backgroundColor = COLORS[targetColorName]; 
+    
+    messageElement.textContent = "Find the " + targetColorName.toUpperCase() + "!";
+    const choices = getRandomChoices(targetColorName);
+    generateButtons(choices);
+}
+
+
+// --- Start the Game! ---
+setTimeout(newRound, 500);
