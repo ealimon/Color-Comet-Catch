@@ -30,27 +30,42 @@ header {
     min-height: 50px;
 }
 
+/* --- NEW TARGET STYLES --- */
 #target-area {
     margin: 50px 0;
+    display: flex; /* Centers the figure and spot side-by-side */
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
 }
 
-#cosmo-star {
-    font-size: 10em; /* Large, easy-to-see star */
-    transition: color 0.5s ease;
+#guide-figure {
+    font-size: 8em; /* Large, friendly face */
 }
+
+#color-spot {
+    width: 150px; /* Size of the color target */
+    height: 150px;
+    border-radius: 50%; /* Make it a large circle */
+    border: 10px solid #4B0082; /* Deep purple border to stand out */
+    background-color: transparent; /* JavaScript sets the actual color */
+    transition: background-color 0.5s ease;
+}
+/* --- END NEW TARGET STYLES --- */
+
 
 #choice-buttons {
     display: flex;
     justify-content: center;
     gap: 30px;
-    flex-wrap: wrap; /* Ensure responsiveness on small screens */
+    flex-wrap: wrap; 
     margin-top: 50px;
 }
 
 .color-button {
     width: 150px;
     height: 150px;
-    border-radius: 50%; /* Make buttons circles (like small planets/bots) */
+    border-radius: 50%; 
     border: 8px solid #333;
     font-size: 1.5em;
     font-weight: bold;
@@ -58,7 +73,6 @@ header {
     cursor: pointer;
     box-shadow: 0 8px 0 0 #000;
     transition: transform 0.1s, box-shadow 0.1s;
-    /* Using background image to ensure text is legible over dark colors */
     text-shadow: 1px 1px 2px black; 
 }
 
@@ -67,5 +81,4 @@ header {
     box-shadow: 0 4px 0 0 #000;
 }
 
-/* Specific button styles (optional but good for visibility) */
-.yellow { color: #333; text-shadow: none; } /* Darker text on bright yellow */
+.yellow { color: #333; text-shadow: none; }
