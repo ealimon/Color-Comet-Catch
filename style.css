@@ -8,7 +8,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-height: 100vh;
+    min-height: 100vh; /* Ensures footer is at bottom */
 }
 
 header {
@@ -30,42 +30,36 @@ header {
     min-height: 50px;
 }
 
-/* --- NEW TARGET STYLES --- */
 #target-area {
     margin: 50px 0;
-    display: flex; /* Centers the figure and spot side-by-side */
-    align-items: center;
-    justify-content: center;
-    gap: 50px;
+    display: flex; /* Use flexbox to center the emoji */
+    justify-content: center; /* Horizontally center */
+    align-items: center; /* Vertically center */
+    flex-grow: 1; /* Allows it to take up available space, pushing footer down */
 }
 
-#guide-figure {
-    font-size: 8em; /* Large, friendly face */
+#cosmo-emoji {
+    font-size: 10em; /* Large emoji */
+    transition: color 0.5s ease; /* Smooth color transition */
+    /* Ensure it's not clickable */
+    pointer-events: none; 
+    user-select: none;
 }
-
-#color-spot {
-    width: 150px; /* Size of the color target */
-    height: 150px;
-    border-radius: 50%; /* Make it a large circle */
-    border: 10px solid #4B0082; /* Deep purple border to stand out */
-    background-color: transparent; /* JavaScript sets the actual color */
-    transition: background-color 0.5s ease;
-}
-/* --- END NEW TARGET STYLES --- */
 
 
 #choice-buttons {
     display: flex;
     justify-content: center;
     gap: 30px;
-    flex-wrap: wrap; 
+    flex-wrap: wrap; /* Ensure responsiveness on small screens */
     margin-top: 50px;
+    margin-bottom: 50px; /* Space above footer */
 }
 
 .color-button {
     width: 150px;
     height: 150px;
-    border-radius: 50%; 
+    border-radius: 50%; /* Make buttons circles (like small planets/bots) */
     border: 8px solid #333;
     font-size: 1.5em;
     font-weight: bold;
@@ -81,4 +75,14 @@ header {
     box-shadow: 0 4px 0 0 #000;
 }
 
-.yellow { color: #333; text-shadow: none; }
+/* Specific button styles (optional but good for visibility) */
+.yellow { color: #333; text-shadow: none; } /* Darker text on bright yellow */
+
+footer {
+    width: 100%;
+    margin-top: auto; /* Pushes footer to the bottom */
+    padding: 20px;
+    font-size: 0.9em;
+    color: #666;
+    border-top: 1px solid #eee;
+}
