@@ -11,8 +11,8 @@ let score = 0;
 const SCORE_TO_WIN = 10; 
 
 // --- DOM Elements (UPDATED) ---
-// We now target the new 'color-spot' instead of the old 'cosmo-star'
-const colorSpot = document.getElementById('color-spot'); 
+// Now targeting the single emoji again
+const cosmoEmoji = document.getElementById('cosmo-emoji'); 
 const messageElement = document.getElementById('message');
 const scoreElement = document.getElementById('score');
 const choiceButtonsDiv = document.getElementById('choice-buttons'); 
@@ -91,8 +91,8 @@ function handleWin() {
 function newRound() {
     targetColorName = COLOR_NAMES[Math.floor(Math.random() * COLOR_NAMES.length)];
     
-    // CHANGE IS HERE: Now coloring the background of the colorSpot DIV
-    colorSpot.style.backgroundColor = COLORS[targetColorName]; 
+    // CHANGE IS HERE: Now coloring the cosmoEmoji directly
+    cosmoEmoji.style.color = COLORS[targetColorName]; 
     
     messageElement.textContent = "Find the " + targetColorName.toUpperCase() + "!";
     const choices = getRandomChoices(targetColorName);
