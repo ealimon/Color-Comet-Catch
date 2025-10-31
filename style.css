@@ -58,6 +58,7 @@ header {
     cursor: pointer;
     box-shadow: 0 8px 0 0 #000;
     transition: transform 0.1s, box-shadow 0.1s;
+    /* Using background image to ensure text is legible over dark colors */
     text-shadow: 1px 1px 2px black; 
 }
 
